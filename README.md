@@ -1,37 +1,94 @@
-## Welcome to GitHub Pages
+# MySQL Katas
 
-You can use the [editor on GitHub](https://github.com/timothyjellison/c-katas/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+In *The Clean Coder* Uncle Bob recommends deliberate practice to master basic skills and keep them sharp. Running through these katas once every few days should keep you feeling comfortable performing basic CRUD operations in MySQL.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Katas
+1. List all databases
+2. Create a new database
+3. Create a new table in the new database with fields firstname, lastname, and age
+4. List all the tables in the new database
+5. Add two rows, one for yourself and one for a friend
+6. Query the table for the firstname of anyone who under 30 years old
+7. Add a column isProgrammer that only holds values true/false
+8. Update your two rows so one has isProgrammer true and the other has isProgrammer false
+9. Delete one of the rows from your table
+10. Delete the new database
 
-### Markdown
+## Tips
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Remember that to you can stretch your commands across multiple lines by pressing <kbd>Enter</kbd>. The command won't execute until you add a semicolon <kbd>;</kbd>
+2. Run through these same katas using a variety of tools: definitely in the mysql console but also try them in a client like [MySQL Workbench](https://www.mysql.com/products/workbench/) or [Sequel Pro](https://www.sequelpro.com/) and through client library like [mysql for Node](https://www.npmjs.com/package/mysql) or [MySQL Connector for Python](https://dev.mysql.com/doc/connector-python/en/).
+3. These are very basic operations but they're the most powerful. 80% of your usecases are covered by 20% of the functionality.
 
-```markdown
-Syntax highlighted code block
+## Solutions
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### List all databases
+```sql
+SHOW DATABASES;
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Create a new database
+```sql
+CREATE DATABASE mydatabasename;
+```
 
-### Jekyll Themes
+### Use a database
+```sql
+USE mydatabasename;
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/timothyjellison/c-katas/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Create a new table
+```sql
+CREATE TABLE mytablename
+(
+firstname VARCHAR(20),
+lastname VARCHAR(20),
+age SMALLINT
+);
+```
 
-### Support or Contact
+### Show all the tables
+```sql
+SHOW TABLES;
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Insert a row
+```sql
+INSERT INTO mytablename (firstname, lastname, age, isProgrammer)
+VALUES ('Grace', 'Hopper', 43, true);
+```
+
+### Conditional query
+```sql
+SELECT firstname
+FROM mytablename
+WHERE age < 30;
+```
+
+### Add a column
+```sql
+ALTER TABLE mytablename
+ADD COLUMN isProgrammer BOOLEAN
+AFTER age;
+```
+
+### Update column in a specific row
+```sql
+UPDATE mytablename
+SET isProgrammer = TRUE
+WHERE firstname = 'Grace';
+```
+
+### Delete a row
+```sql
+DELETE FROM mytablename
+WHERE isProgrammer <> TRUE;
+```
+
+### Delete the new database
+```sql
+DROP DATABASE mydatabasename;
+```
+
+## Happy Coding!
+You can find me over at [timothyellison.com](https://www.timothyellison.com/)
