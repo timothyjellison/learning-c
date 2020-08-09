@@ -1,4 +1,4 @@
-# MySQL Katas
+# C Katas
 
 In *The Clean Coder* Uncle Bob recommends deliberate practice to master basic skills and keep them sharp. These are some basic skills to get you over your fear of C.
 
