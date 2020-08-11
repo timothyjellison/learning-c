@@ -1,15 +1,15 @@
-# C Katas
+# Learning C
 
-In *The Clean Coder* Uncle Bob recommends deliberate practice to master basic skills and keep them sharp. These are some basic skills to get you over your fear of C.
+These are some basic skills to get you over your fear of C.
 
-## Katas
-1. Create a `.c` file that prints "Hello" to the console.
+## Steps
+1. Write a program that prints "Hello" to the console.
 2. Compile it.
 3. Execute it.
 
 ## Tips
 
-TBD
+1. Don't panic. Get over the "real men write C" bullshit. C is just another language. Anyone can write c.
 
 ## Solutions
 
@@ -30,6 +30,8 @@ int main() {
 ```bash
 clang hello.c -o hello
 ```
+
+If you don't have `clang` on your computer try using `gcc`
 
 ### Execute it
 ```bash
