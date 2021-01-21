@@ -9,7 +9,7 @@ These are some basic skills to get you over your fear of C.
 
 ## Tips
 
-1. Don't panic. Get over the "real men write C" bullshit. C is just another language. Anyone can write c.
+1. Don't panic. Get over the "real men write C" bullshit. C is just another language. Anyone can write C.
 
 ## Solutions
 
@@ -39,4 +39,4 @@ If you don't have `clang` on your computer try using `gcc`
 ```
 
 ## Happy Coding!
-You can find me over at [timothyellison.com](https://www.timothyellison.com/)
+You can find me over at [timellison.dev](https://www.timellison.dev/)
