@@ -9,7 +9,7 @@ These are some basic skills to get you over your fear of C.
 
 ## Tips
 
-1. Don't panic. Get over the "real men write C" bullshit. C is just another language. Anyone can write C.
+1. Don't panic. C is just another language. Anyone can write C.
 
 ## Solutions
 
